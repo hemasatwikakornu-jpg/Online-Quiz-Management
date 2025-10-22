@@ -57,21 +57,21 @@ public class Main {
             q.display();
             char userAnswer = getAnswer(scanner);
             if (q.isCorrect(userAnswer)) {
-                System.out.println("✅ Correct!");
+                System.out.println("Correct!");
                 score++;
             } else {
-                System.out.println("❌ Incorrect. Correct answer: " + q.correctAnswer);
+                System.out.println(" Incorrect. Correct answer: " + q.correctAnswer);
             }
         }
 
         // Show result
-        System.out.println("\n🎉 Quiz Completed!");
-        System.out.println("👤 Name: " + name);
-        System.out.println("📊 Score: " + score + "/" + questions.length);
+        System.out.println("\n Quiz Completed!");
+        System.out.println(" Name: " + name);
+        System.out.println(" Score: " + score + "/" + questions.length);
         if (score >= 3) {
-            System.out.println("🏆 Result: Passed");
+            System.out.println(" Result: Passed");
         } else {
-            System.out.println("❌ Result: Failed");
+            System.out.println(" Result: Failed");
         }
 
         scanner.close();
@@ -85,7 +85,7 @@ public class Main {
             if (input.length() == 1 && input.charAt(0) >= 'A' && input.charAt(0) <= 'D') {
                 return input.charAt(0);
             } else {
-                System.out.println("⚠️ Invalid input. Please enter A, B, C, or D.");
+                System.out.println(" Invalid input. Please enter A, B, C, or D.");
             }
         }
     }
