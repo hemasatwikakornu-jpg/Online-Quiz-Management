@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Question class inside Main for compatibility with online compilers
+
     static class Question {
         String questionText;
         String[] options;
@@ -30,11 +30,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Greet user
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
 
-        // Create quiz questions
         Question[] questions = {
             new Question("1. Which language is platform independent?",
                 new String[]{"A) C", "B) C++", "C) Java", "D) Python"}, 'C'),
@@ -52,7 +50,6 @@ public class Main {
 
         System.out.println("\nWelcome, " + name + "! Let's begin the quiz:");
 
-        // Loop through questions
         for (Question q : questions) {
             q.display();
             char userAnswer = getAnswer(scanner);
@@ -64,7 +61,7 @@ public class Main {
             }
         }
 
-        // Show result
+    
         System.out.println("\n Quiz Completed!");
         System.out.println(" Name: " + name);
         System.out.println(" Score: " + score + "/" + questions.length);
@@ -77,7 +74,7 @@ public class Main {
         scanner.close();
     }
 
-    // Method to safely get user answer
+
     public static char getAnswer(Scanner scanner) {
         while (true) {
             System.out.print("Enter your answer (A-D): ");
